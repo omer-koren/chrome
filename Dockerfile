@@ -13,6 +13,7 @@ RUN apt-get update \
 	fonts-takao \
 	pulseaudio \
 	supervisor \
+	novnc \
 	x11vnc \
 	fluxbox
 
@@ -45,6 +46,7 @@ RUN apt-get clean \
 VOLUME ["/home/chrome"]
 
 EXPOSE 5900
+EXPOSE 8080
 
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
 
